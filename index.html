@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyLinks</title>
 
-  <!-- Font Awesome Ícones -->
+  <!-- Font Awesome v6.4.0 com integridade e referrer OK -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,43 +14,41 @@
     referrerpolicy="no-referrer"
   />
 
-  <!-- LinkedIn Badge -->
+  <!-- LinkedIn badge -->
   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
   <style>
-    /* Estilo geral */
     body {
       margin: 0;
       padding: 0;
       min-height: 100vh;
-      font-family: 'Segoe UI', Cambria, serif;
       background: linear-gradient(to bottom, #000000, #2c2c2c); /* Preto para cinza escuro */
-      color: #f0f0f0;
+      font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      color: white;
       text-align: center;
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      animation: glow 1.8s infinite alternate;
-      letter-spacing: 2px;
+      margin: 20px 0;
+      font-size: 30px;
+      animation: glow 1.5s infinite alternate;
     }
 
     @keyframes glow {
       from {
-        text-shadow: 0 0 10px #999, 0 0 20px #bbb, 0 0 30px #aaa;
+        text-shadow: 0 0 10px #999, 0 0 20px #ccc;
       }
       to {
-        text-shadow: 0 0 20px #ccc, 0 0 30px #eee, 0 0 40px #fff;
+        text-shadow: 0 0 20px #fff, 0 0 30px #aaa;
       }
     }
 
     .icon-container {
-      background-color: rgba(20, 20, 20, 0.95);
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 25px 40px;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.6);
@@ -58,22 +56,21 @@
     }
 
     .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
       list-style: none;
       padding: 0;
-      margin: 0;
+      display: flex;
+      gap: 25px;
+      justify-content: center;
     }
 
     .social-icons li a {
       font-size: 36px;
-      color: #f0f0f0;
-      transition: all 0.3s ease-in-out;
+      color: #fff;
+      transition: 0.3s ease;
     }
 
     .social-icons li a:hover {
-      color: #aaaaaa;
+      color: #aaa;
       transform: scale(1.2);
     }
 
@@ -81,21 +78,6 @@
       background-color: rgba(20, 20, 20, 0.95);
       padding: 20px;
       border-radius: 10px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 24px;
-      }
-
-      .social-icons li a {
-        font-size: 28px;
-      }
-
-      .icon-container {
-        padding: 20px;
-      }
     }
   </style>
 </head>
