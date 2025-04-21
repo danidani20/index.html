@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyLinks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             background: linear-gradient(to bottom, #0d0e0c, #cf0516);
@@ -13,6 +14,11 @@
             padding: 0;
             font-family: cambria, sans-serif;
             color: #e5ece5;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         @keyframes neon-glow {
@@ -27,39 +33,51 @@
         .social-icons {
             list-style: none;
             padding: 0;
-            text-align: center; /* Centraliza os ícones horizontalmente */
+            margin-bottom: 20px; /* Espaço abaixo dos ícones */
         }
 
         .social-icons li {
             display: inline-block;
-            margin-right: 10px;
-        }
-
-        .social-icons li:last-child {
-            margin-right: 0;
+            margin: 0 10px;
         }
 
         .social-icons li a {
             color: #f8f4f4;
             font-size: 24px;
+            transition: transform 0.3s;
         }
 
-        footer {
-            background-color: #0a0707f5;
-            padding: 20px;
-            text-align: center; /* Isso centralizará o conteúdo dentro do footer, se houver mais coisas além dos ícones no futuro */
+        .social-icons li a:hover {
+            transform: scale(1.2);
+        }
+
+        h1 {
+            margin: 0;
+            animation: neon-glow 1.5s infinite alternate;
+        }
+
+        .linkedin-badge {
+            margin-top: 30px; /* Espaço acima do LinkedIn */
         }
     </style>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 <body>
+    <!-- Ícones acima do título -->
     <ul class="social-icons">
         <li><a href="https://twitter.com/daniels82451551" target="_blank"><i class="fab fa-twitter"></i></a></li>
         <li><a href="https://www.youtube.com/channel/UCdPCNXtdvgdAIAT0mHRaJ-w" target="_blank"><i class="fab fa-youtube"></i></a></li>
         <li><a href="https://www.instagram.com/danielsantosyt23/" target="_blank"><i class="fab fa-instagram"></i></a></li>
         <li><a href="https://www.paypal.com/donate/?business=H3LRW9CQYAMK4&no_recurring=0&currency_code=EUR" target="_blank"><i class="fab fa-paypal"></i></a></li>
     </ul>
-    <h1> FOLLOW-ME AND DONATE ⇗ </h1>
-    <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="daniel-couto-68bb09278" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/daniel-couto-68bb09278?trk=profile-badge">Daniel Couto</a></div>
 
-    <script src="
+    <h1>FOLLOW-ME AND DONATE ⇗</h1>
+
+    <!-- LinkedIn abaixo -->
+    <div class="linkedin-badge">
+        <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="daniel-couto-68bb09278" data-version="v1">
+            <a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/daniel-couto-68bb09278?trk=profile-badge">Daniel Couto</a>
+        </div>
+    </div>
+</body>
+</html>
