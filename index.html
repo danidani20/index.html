@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MyLinks</title>
 
-  <!-- Font Awesome (testado e funcional) -->
+  <!-- Ícones do Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- LinkedIn Badge Script -->
+  <!-- LinkedIn badge -->
   <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
   <style>
@@ -16,23 +16,23 @@
       margin: 0;
       padding: 0;
       min-height: 100vh;
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      background: linear-gradient(to bottom, #000000, #1a1a1a); /* Preto para cinza escuro */
-      color: #fff;
+      justify-content: center;
       text-align: center;
     }
 
     h1 {
-      margin-bottom: 30px;
+      margin: 20px 0;
       font-size: 28px;
-      animation: neon-glow 1.5s infinite alternate;
+      animation: glow 1.5s infinite alternate;
     }
 
-    @keyframes neon-glow {
+    @keyframes glow {
       from {
         text-shadow: 0 0 10px #aaa, 0 0 20px #888;
       }
@@ -45,13 +45,14 @@
       background-color: rgba(0, 0, 0, 0.85);
       padding: 25px 40px;
       border-radius: 15px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     .social-icons {
       list-style: none;
       padding: 0;
+      margin: 0;
       display: flex;
       gap: 25px;
       justify-content: center;
@@ -78,6 +79,7 @@
 </head>
 <body>
 
+  <!-- ÍCONES SOCIAIS -->
   <div class="icon-container">
     <ul class="social-icons">
       <li><a href="https://twitter.com/daniels82451551" target="_blank"><i class="fab fa-twitter"></i></a></li>
@@ -87,8 +89,10 @@
     </ul>
   </div>
 
+  <!-- FRASE ÚNICA -->
   <h1>FOLLOW ME AND DONATE ⇗</h1>
 
+  <!-- LINKEDIN BADGE -->
   <div class="linkedin-badge">
     <div class="badge-base LI-profile-badge"
          data-locale="pt_BR"
@@ -97,12 +101,11 @@
          data-type="VERTICAL"
          data-vanity="daniel-couto-68bb09278"
          data-version="v1">
-      <a class="badge-base__link LI-simple-link"
-         href="https://br.linkedin.com/in/daniel-couto-68bb09278?trk=profile-badge">Daniel Couto</a>
     </div>
   </div>
 
 </body>
 </html>
+
 
  
