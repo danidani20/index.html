@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyLinks</title>
-    <!-- ✅ Link ESSENCIAL para os ícones (Font Awesome) -->
+    <!-- Link ESSENCIAL para os ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
             background: linear-gradient(to bottom, #0d0e0c, #cf0516);
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
-            font-family: cambria, sans-serif;
+            padding: 20px;
+            font-family: Cambria, serif;
             color: #e5ece5;
             text-align: center;
             display: flex;
@@ -31,51 +31,54 @@
             }
         }
 
-        /* ✅ Container da faixa preta */
-        .icon-bar {
-            background-color: #0a0707f5;
-            padding: 20px;
+        /* Container da faixa preta */
+        .icon-container {
+            background-color: rgba(10, 7, 7, 0.96);
+            padding: 20px 40px;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .social-icons {
             list-style: none;
             padding: 0;
             margin: 0;
-        }
-
-        .social-icons li {
-            display: inline-block;
-            margin: 0 15px;
+            display: flex;
+            gap: 20px;
         }
 
         .social-icons li a {
             color: #f8f4f4;
-            font-size: 28px;
-            transition: transform 0.3s;
+            font-size: 32px;
+            transition: all 0.3s ease;
+            display: inline-block;
         }
 
         .social-icons li a:hover {
-            transform: scale(1.2);
+            transform: scale(1.15);
             color: #cf0516;
         }
 
         h1 {
-            margin: 0;
+            margin: 0 0 30px 0;
             animation: neon-glow 1.5s infinite alternate;
-            font-size: 24px;
+            font-size: 28px;
+            letter-spacing: 1px;
         }
 
         .linkedin-badge {
             margin-top: 30px;
+            background-color: rgba(10, 7, 7, 0.96);
+            padding: 15px;
+            border-radius: 10px;
         }
     </style>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 <body>
-    <!-- ✅ Ícones COM faixa preta -->
-    <div class="icon-bar">
+    <!-- Ícones sociais com faixa preta -->
+    <div class="icon-container">
         <ul class="social-icons">
             <li><a href="https://twitter.com/daniels82451551" target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li><a href="https://www.youtube.com/channel/UCdPCNXtdvgdAIAT0mHRaJ-w" target="_blank"><i class="fab fa-youtube"></i></a></li>
@@ -86,12 +89,29 @@
 
     <h1>FOLLOW-ME AND DONATE ⇗</h1>
 
-    <!-- LinkedIn -->
+    <!-- LinkedIn com fundo escuro -->
     <div class="linkedin-badge">
         <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="daniel-couto-68bb09278" data-version="v1">
             <a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/daniel-couto-68bb09278?trk=profile-badge">Daniel Couto</a>
         </div>
     </div>
+
+    <!-- Verificação de erros -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verifica se os ícones foram carregados
+            const icons = document.querySelectorAll('.fab');
+            if(icons.length === 0) {
+                console.error('Erro: Ícones não carregados. Verifique a conexão com a internet e o link do Font Awesome.');
+            } else {
+                console.log('Ícones carregados com sucesso:', icons.length);
+            }
+            
+            // Verifica se o script do LinkedIn foi carregado
+            if(typeof window.LI === 'undefined') {
+                console.warn('Aviso: Script do LinkedIn não carregado completamente.');
+            }
+        });
+    </script>
 </body>
 </html>
-
