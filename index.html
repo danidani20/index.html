@@ -1,150 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyLinks</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLinks</title>
 
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-Cy+K7+1bSn51N0LsxT0lN+CE/RYIP3FOSmrCzOcXj9mHTuE0o7BcnPY4kKZ+VKhRUc1B1+l9zFuMmuWTrfiIKA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    <!-- Font Awesome (ícones sociais) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-Cy+K7+1bSn51N0LsxT0lN+CE/RYIP3FOSmrCzOcXj9mHTuE0o7BcnPY4kKZ+VKhRUc1B1+l9zFuMmuWTrfiIKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- LinkedIn badge -->
-  <script
-    src="https://platform.linkedin.com/badges/js/profile.js"
-    async
-    defer
-    type="text/javascript"
-  ></script>
+    <!-- LinkedIn badge script -->
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
-  <style>
-    body {
-      background: linear-gradient(to bottom, #0d0e0c, #2c2c2c); /* preto → cinza escuro */
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-      font-family: Cambria, serif;
-      color: #e5ece5;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1e1e1e, #4d4d4d); /* fundo cinza escuro para médio */
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: Cambria, serif;
+            color: #e5ece5;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    @keyframes neon-glow {
-      from {
-        text-shadow: 0 0 10px #e7ece7, 0 0 20px #e8f1e8, 0 0 40px #e7ece7, 0 0 80px #e9f1e9;
-      }
-      to {
-        text-shadow: 0 0 20px #ecf1ec, 0 0 40px #edf5ed, 0 0 80px #ecf3ec, 0 0 160px #e5ece5;
-      }
-    }
+        @keyframes neon-glow {
+            from {
+                text-shadow: 0 0 10px #e7ece7, 0 0 20px #e8f1e8, 0 0 40px #e7ece7, 0 0 80px #e9f1e9;
+            }
+            to {
+                text-shadow: 0 0 20px #ecf1ec, 0 0 40px #edf5ed, 0 0 80px #ecf3ec, 0 0 160px #e5ece5;
+            }
+        }
 
-    .icon-container {
-      background-color: rgba(10, 7, 7, 0.96);
-      padding: 20px 40px;
-      border-radius: 10px;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
+        .icon-container {
+            background-color: rgba(10, 7, 7, 0.96);
+            padding: 20px 40px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
 
-    .social-icons {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 20px;
-    }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
 
-    .social-icons li a {
-      color: #f8f4f4;
-      font-size: 32px;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
+        .social-icons li a {
+            color: #f8f4f4;
+            font-size: 32px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
 
-    .social-icons li a:hover {
-      transform: scale(1.15);
-      color: #cf0516; /* Vermelho no hover, se quiser mudar isso também posso! */
-    }
+        .social-icons li a:hover {
+            transform: scale(1.15);
+            color: #cf0516;
+        }
 
-    h1 {
-      margin: 0 0 30px 0;
-      animation: neon-glow 1.5s infinite alternate;
-      font-size: 28px;
-      letter-spacing: 1px;
-    }
+        h1 {
+            margin: 0 0 30px 0;
+            animation: neon-glow 1.5s infinite alternate;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
 
-    .linkedin-badge {
-      margin-top: 30px;
-      background-color: rgba(10, 7, 7, 0.96);
-      padding: 15px;
-      border-radius: 10px;
-    }
-  </style>
+        .linkedin-badge {
+            margin-top: 30px;
+            background-color: rgba(10, 7, 7, 0.96);
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Ícones sociais -->
-  <div class="icon-container">
-    <ul class="social-icons">
-      <li>
-        <a href="https://twitter.com/daniels82451551" target="_blank"><i class="fab fa-twitter"></i></a>
-      </li>
-      <li>
-        <a href="https://www.youtube.com/channel/UCdPCNXtdvgdAIAT0mHRaJ-w" target="_blank"><i class="fab fa-youtube"></i></a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/danielsantosyt23/" target="_blank"><i class="fab fa-instagram"></i></a>
-      </li>
-      <li>
-        <a href="https://www.paypal.com/donate/?business=H3LRW9CQYAMK4&no_recurring=0&currency_code=EUR" target="_blank"><i class="fab fa-paypal"></i></a>
-      </li>
-    </ul>
-  </div>
 
-  <h1>FOLLOW ME AND DONATE ⇗</h1>
-
-  <!-- LinkedIn -->
-  <div class="linkedin-badge">
-    <div
-      class="badge-base LI-profile-badge"
-      data-locale="pt_BR"
-      data-size="medium"
-      data-theme="dark"
-      data-type="VERTICAL"
-      data-vanity="daniel-couto-68bb09278"
-      data-version="v1"
-    >
-      <a
-        class="badge-base__link LI-simple-link"
-        href="https://br.linkedin.com/in/daniel-couto-68bb09278?trk=profile-badge"
-      >
-        Daniel Couto
-      </a>
+    <!-- Ícones sociais com fundo preto -->
+    <div class="icon-container">
+        <ul class="social-icons">
+            <li><a href="https://twitter.com/daniels82451551" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCdPCNXtdvgdAIAT0mHRaJ-w" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.instagram.com/danielsantosyt23/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.paypal.com/donate/?business=H3LRW9CQYAMK4&no_recurring=0&currency_code=EUR" target="_blank"><i class="fab fa-paypal"></i></a></li>
+        </ul>
     </div>
-  </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const icons = document.querySelectorAll(".fab");
-      if (icons.length === 0) {
-        console.error("Erro: Ícones não carregados.");
-      } else {
-        console.log("Ícones carregados com sucesso:", icons.length);
-      }
+    <h1>FOLLOW ME AND DONATE ⇗</h1>
 
-      if (typeof window.LI === "undefined") {
-        console.warn("Aviso: Script do LinkedIn não carregado.");
-      }
-    });
-  </script>
+    <!-- LinkedIn com fundo escuro -->
+    <div class="linkedin-badge">
+        <div class="badge-base LI-profile-badge" 
+             data-locale="pt_BR" 
+             data-size="medium" 
+             data-theme="dark" 
+             data-type="VERTICAL" 
+             data-vanity="daniel-couto-68bb09278" 
+             data-version="v1">
+            <a class="badge-base__link LI-simple-link" href="https://br.linkedin.com/in/daniel-couto-68bb09278?trk=profile-badge">Daniel Couto</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const icons = document.querySelectorAll('.fab');
+            if (icons.length === 0) {
+                console.error('Erro: Ícones não carregados. Verifique sua conexão ou o link do Font Awesome.');
+            } else {
+                console.log('Ícones carregados com sucesso:', icons.length);
+            }
+
+            if (typeof window.LI === 'undefined') {
+                console.warn('Aviso: Script do LinkedIn não carregado completamente.');
+            }
+        });
+    </script>
+
 </body>
 </html>
+
 
